@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ubuntu Make Apps
+Comment=Manage AppImage applications on Ubuntu
+Exec=ubuntu-make-apps
+Icon=ubuntu-make-apps
+Type=Application
+Terminal=false
+Categories=Utility;Application;
+StartupNotify=true
+StartupWMClass=ubuntu-make-apps

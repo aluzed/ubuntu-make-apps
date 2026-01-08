@@ -1,0 +1,64 @@
+{
+  "name": "ubuntu-make-apps",
+  "productName": "Ubuntu Make Apps",
+  "version": "1.0.0",
+  "description": "Ubuntu AppImage Manager",
+  "homepage": "https://github.com/aluzed/ubuntu-make-apps",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --linux AppImage",
+    "build-appimage": "electron-builder --linux AppImage"
+  },
+  "keywords": [
+    "ubuntu",
+    "appimage",
+    "desktop"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.10.0"
+  },
+  "build": {
+    "appId": "com.ubuntu-make-apps.app",
+    "productName": "Ubuntu-Make-Apps",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!Install.md",
+      "!build/**"
+    ],
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": "x64"
+        }
+      ],
+      "category": "Utility",
+      "maintainer": "aluzed",
+      "description": "Electron application to easily manage your AppImage applications on Ubuntu",
+      "desktop": {
+        "entry": {
+          "Name": "Ubuntu Make Apps",
+          "Comment": "Manage AppImage applications",
+          "Categories": "Utility;Application;",
+          "Terminal": "false",
+          "Type": "Application"
+        }
+      },
+      "packageCategory": "utils",
+      "synopsis": "Manage AppImage applications on Ubuntu",
+      "vendor": "Ubuntu Make Apps"
+    }
+  }
+}
