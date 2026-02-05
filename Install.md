@@ -1,5 +1,25 @@
 # Installation Guide
 
+## Quick Install (Recommended)
+
+Install Ubuntu Make Apps with a single command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/aluzed/ubuntu-make-apps/master/install.sh | bash
+```
+
+This automated script will:
+1. Check system requirements (Node.js 18+, npm, git, FUSE)
+2. Clone the repository
+3. Install npm dependencies
+4. Build the AppImage
+5. Install to `~/Applications`
+6. Create a desktop menu entry
+
+**Requirements:** Node.js 18+, npm, git
+
+---
+
 ## AppImage - Recommended Portable Format
 
 AppImage is a **portable** format that requires **no installation** and **no system dependencies**. Everything is included in a single executable file.

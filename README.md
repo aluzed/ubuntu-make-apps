@@ -12,7 +12,25 @@ Electron application to easily manage your AppImage applications on Ubuntu.
 - Icon management
 - Modern interface with Bootstrap 5
 
-## Installation
+## Quick Installation (One-liner)
+
+Install directly from GitHub with a single command:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/aluzed/ubuntu-make-apps/master/install.sh | bash
+```
+
+This will:
+- Check system requirements (Node.js 18+, npm, git)
+- Clone the repository
+- Install dependencies
+- Build the AppImage
+- Install to ~/Applications
+- Create a desktop menu entry
+
+## Development Installation
+
+For development purposes:
 
 ```bash
 npm install
