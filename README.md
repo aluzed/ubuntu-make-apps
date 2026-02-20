@@ -6,6 +6,10 @@
 
 Electron application to easily manage your AppImage applications on Ubuntu.
 
+<p align="center">
+  <img src="ubuntu-make-apps-screen.png" alt="Demo" width="640">
+</p>
+
 ## Features
 
 - Automatically create the `~/Applications` folder
@@ -25,6 +29,7 @@ curl -fsSL https://raw.githubusercontent.com/aluzed/ubuntu-make-apps/master/inst
 ```
 
 This will:
+
 - Check system requirements (Node.js 18+, npm, git)
 - Clone the repository
 - Install dependencies
