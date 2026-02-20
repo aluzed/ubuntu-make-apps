@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/UMA.png" alt="Ubuntu Make Apps" width="128">
+</p>
+
 # Ubuntu Make Apps
 
 Electron application to easily manage your AppImage applications on Ubuntu.
@@ -60,22 +64,32 @@ npm start
 - `renderer.js`: Application logic
 - `styles.css`: Custom styles
 
-## Building .deb Package
+## Building
 
-To build an installable .deb package for Ubuntu 24 and other Debian-based distributions:
+### AppImage (portable)
 
 ```bash
 # Using npm
-npm run build-deb
+npm run build-appimage
 
 # Using the build script
 ./build.sh
 
 # Using the Makefile
+make build-appimage
+```
+
+### .deb Package (Ubuntu/Debian)
+
+```bash
+# Using npm
+npm run build-deb
+
+# Using the Makefile
 make build-deb
 ```
 
-The package will be created as `dist/ubuntu-make-apps_1.0.0_amd64.deb`.
+The packages will be created in `dist/`.
 
 For detailed installation instructions, see [Install.md](Install.md).
 

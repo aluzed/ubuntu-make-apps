@@ -1,6 +1,6 @@
 # Makefile for Ubuntu Make Apps
 
-.PHONY: all clean install build-appimage help
+.PHONY: all clean install build-appimage build-deb help
 
 # Default target
 all: help
@@ -12,11 +12,13 @@ help:
 	@echo "Available targets:"
 	@echo "  make install         - Build AppImage (recommended)"
 	@echo "  make build-appimage  - Build AppImage package"
+	@echo "  make build-deb       - Build .deb package (Ubuntu/Debian)"
 	@echo "  make clean           - Clean build artifacts"
 	@echo "  make help            - Show this help message"
 	@echo ""
 	@echo "Examples:"
 	@echo "  make install         # Creates AppImage in dist/"
+	@echo "  make build-deb       # Creates .deb in dist/"
 	@echo "  make clean install   # Clean and build AppImage"
 
 # Install dependencies
@@ -29,6 +31,12 @@ build-appimage: deps
 	@echo "Building AppImage..."
 	npm run build-appimage
 	@echo "AppImage created in dist/"
+
+# Build .deb package
+build-deb: deps
+	@echo "Building .deb package..."
+	npm run build-deb
+	@echo ".deb package created in dist/"
 
 # Build and create AppImage (main target)
 install: build-appimage
